@@ -1,4 +1,4 @@
-﻿// -------------------------------------------------------------------------- //
+﻿	// -------------------------------------------------------------------------- //
 //         Sitecore Install Framework - Sitecore XP0 Configuration            //
 //                                                                            //
 //  Run this configuration to install a single instance of Sitecore.          //
@@ -52,7 +52,7 @@
         },
         "SqlAdminPassword": {
             "Type": "string",
-            "DefaultValue": "test12345",
+            "DefaultValue": "12345",
             "Description": "The Sql admin password to use when installing databases."
         },
         "SqlCoreUser": {
@@ -145,11 +145,46 @@
             "DefaultValue": "Test12345",
             "Description": "The Sql password for the Experience Forms connection string in Sitecore."
         },
+        "SqlExmMasterUser": {
+            "Type": "string",
+            "DefaultValue": "exmmasteruser",
+            "Description": "The Sql user for the EXM Master connection string in Sitecore."
+        },
+        "SqlExmMasterPassword": {
+            "Type": "string",
+            "DefaultValue": "Test12345",
+            "Description": "The Sql password for the EXM Master connection string in Sitecore."
+        },
+        "SqlMessagingUser": {
+          "Type": "string",
+          "DefaultValue": "messaginguser",
+          "Description": "The Sql user for the Messaging connection string in Sitecore."
+        },
+        "SqlMessagingPassword": {
+            "Type": "string",
+            "DefaultValue": "Test12345",
+            "Description": "The Sql password for the Messaging connection string in Sitecore."
+        },
         "SqlServer": {
             "Type": "string",
             "DefaultValue": ".\\SQLSERVER",
             "Description": "The Sql Server where databases will be installed."
         },
+        "ExmEdsProvider": {
+          "Type": "string",
+          "DefaultValue": "CustomSMTP",
+          "Description": "The default EDS provider to be used."
+        },
+        "EXMCryptographicKey": {
+            "Type": "string",
+            "DefaultValue": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "Description": "64 digits hexadecimal EXM Cryptographic Key."
+        },
+        "EXMAuthenticationKey": {
+            "Type": "string",
+            "DefaultValue": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "Description": "64 digits hexadecimal EXM Authentication Key."
+        },        
         "SolrUrl": {
             "Type": "string",
             "DefaultValue": "https://localhost:8983/solr",
@@ -174,6 +209,11 @@
             "Type": "string",
             "Reference": "XConnectCollectionService",
             "Description": "The url for the XConnect Marketing Automation Reporting Service."
+        },
+        "TelerikEncryptionKey": {
+            "Type": "string",
+            "DefaultValue": "PutYourCustomEncryptionKeyHereFrom32To256CharactersLong",
+            "Description": "The key to be used by Telerik controls to encrypt interaction with Content Editors. It's a random string between 32 and 256 symbols long."
         }
     },
     "Variables": {
@@ -189,6 +229,8 @@
         "Sql.Database.Pools":               "[concat(parameter('SqlDbPrefix'), '_Processing.Pools')]",
         "Sql.Database.Tasks":               "[concat(parameter('SqlDbPrefix'), '_Processing.Tasks')]",
         "Sql.Database.MarketingAutomation": "[concat(parameter('SqlDbPrefix'), '_MarketingAutomation')]",
+        "Sql.Database.EXM.Master":          "[concat(parameter('SqlDbPrefix'), '_EXM.Master')]",
+        "Sql.Database.Messaging":           "[concat(parameter('SqlDbPrefix'), '_Messaging')]",
 
         // The security certificate details
         "Security.CertificateStore":                "Cert:\\Localmachine\\My",
@@ -209,6 +251,7 @@
         "Solr.FXM.Web.Name":    "[concat(parameter('SolrCorePrefix'), '_fxm_web_index')]",
 
         // The sites full path on disk
+        //MCH: we use an own webroot directory path
         //"Site.PhysicalPath": "[joinpath(environment('SystemDrive'), 'inetpub', 'wwwroot', parameter('SiteName'))]",
         "Site.PhysicalPath": "[joinpath(parameter('SiteRoot'), parameter('SiteName'))]",
 
@@ -333,6 +376,8 @@
                         { "Name": "Marketing Automation DB Name", "Value": "[variable('Sql.Database.MarketingAutomation')]" },
                         { "Name": "Processing Pools DB Name", "Value": "[variable('Sql.Database.Pools')]" },
                         { "Name": "Processing Tasks DB Name", "Value": "[variable('Sql.Database.Tasks')]" },
+                        { "Name": "EXM Master DB Name", "Value": "[variable('Sql.Database.EXM.Master')]" },
+                        { "Name": "Messaging DB Name", "Value": "[variable('Sql.Database.Messaging')]" },
                         { "Name": "Core DB User Name", "Value": "[parameter('SqlCoreUser')]" },
                         { "Name": "Core DB User Password", "Value": "[parameter('SqlCorePassword')]" },
                         { "Name": "Master DB User Name", "Value": "[parameter('SqlMasterUser')]" },
@@ -345,6 +390,10 @@
                         { "Name": "XDB Reference Data DB User Password", "Value": "[parameter('SqlReferenceDataPassword')]" },
                         { "Name": "Experience Forms DB User Name", "Value": "[parameter('SqlFormsUser')]" },
                         { "Name": "Experience Forms DB User Password", "Value": "[parameter('SqlFormsPassword')]" },
+                        { "Name": "EXM Master DB User Name", "Value":  "[parameter('SqlExmMasterUser')]"},
+                        { "Name": "EXM Master DB User Password", "Value":  "[parameter('SqlExmMasterPassword')]"},
+                        { "Name": "Messaging DB User Name", "Value":  "[parameter('SqlMessagingUser')]"},
+                        { "Name": "Messaging DB User Password", "Value":  "[parameter('SqlMessagingPassword')]"},
                         { "Name": "Marketing Automation DB User Name", "Value": "[parameter('SqlMarketingAutomationUser')]" },
                         { "Name": "Marketing Automation DB User Password", "Value": "[parameter('SqlMarketingAutomationPassword')]" },
                         { "Name": "Processing Pools DB User Name", "Value": "[parameter('SqlProcessingPoolsUser')]" },
@@ -367,7 +416,11 @@
                         { "Name": "Solr Testing Index Name", "Value": "[variable('Solr.Testing.Name')]" },
                         { "Name": "Solr Suggested Index Name", "Value": "[variable('Solr.Suggested.Name')]" },
                         { "Name": "Solr FXM Master Index Name", "Value": "[variable('Solr.FXM.Master.Name')]" },
-                        { "Name": "Solr FXM Web Index Name", "Value": "[variable('Solr.FXM.Web.Name')]" }
+                        { "Name": "Solr FXM Web Index Name", "Value": "[variable('Solr.FXM.Web.Name')]" },
+                        { "Name": "Telerik Encryption Key", "Value": "[parameter('TelerikEncryptionKey')]" },
+                        { "Name": "EXM EDS Provider", "Value": "[parameter('ExmEdsProvider')]"},
+                        { "Name": "EXM Cryptographic Key", "Value": "[parameter('EXMCryptographicKey')]" },
+                        { "Name": "EXM Authentication Key", "Value": "[parameter('EXMAuthenticationKey')]" }
                     ]
                 }
             }

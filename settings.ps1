@@ -3,7 +3,7 @@ $SolutionPrefix = "mch.habitat.v9"
 $SitePostFix = "dev.local"
 $webroot = "C:\Work\Sitecore"
 
-$SitecoreVersion = "9.0.0 rev. 171002"
+$SitecoreVersion = "9.0.1 rev. 171219"
 $InstallerVersion = "1.0.2"
 
 # Assets and prerequisites

@@ -20,12 +20,12 @@
         },
         "SolrRoot": {
             "Type": "string",
-            "DefaultValue": "C:\\solr\\solr-6.6.2",
-            "Description": "The file path to the Solr instance."
+            "DefaultValue": "c:\\solr-6.6.1",
+            "Description": "The file path to the Solr instance." 
         },
         "SolrService": {
             "Type": "string",
-            "DefaultValue": "Solr-6.6.2",
+            "DefaultValue": "Solr-6.6.1",
             "Description": "The name of the Solr service."
         },
         "BaseConfig": {
