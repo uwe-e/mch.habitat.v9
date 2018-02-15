@@ -1,4 +1,3 @@
-
 Add the asset files to this directory. You will need:
 
 - license.xml (your Sitecore license)
