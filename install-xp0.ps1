@@ -187,14 +187,23 @@ function Install-Assets {
 }
 
 function Install-XConnect {
-    #Install xConnect Solr
+    #install solr cores for xdb
     try
     {
-        Install-SitecoreConfiguration $XConnectSolrConfiguration `
-                                      -SolrUrl $SolrUrl `
-                                      -SolrRoot $SolrRoot `
-                                      -SolrService $SolrService `
-                                      -CorePrefix $SolutionPrefix
+        $solrParams = @{
+            Path = $XConnectSolrConfiguration
+            SolrUrl = $SolrUrl
+            SolrRoot = $SolrRoot
+            SolrService = $SolrService
+            CorePrefix = $SolutionPrefix
+        }
+        Install-SitecoreConfiguration @solrParams
+        
+        #Install-SitecoreConfiguration $XConnectSolrConfiguration `
+        #                              -SolrUrl $SolrUrl `
+        #                              -SolrRoot $SolrRoot `
+        #                              -SolrService $SolrService `
+        #                              -CorePrefix $SolutionPrefix
     }
     catch
     {
@@ -205,6 +214,13 @@ function Install-XConnect {
     #Generate xConnect client certificate
     try
     {
+        #$certParams = @{
+        #    Path = $XConnectCertificateConfiguration
+        #    CertificateName = $XConnectCert
+        #    CertPath = $CertPath
+        #}
+        #Install-SitecoreConfiguration @certParam
+        
         Install-SitecoreConfiguration $XConnectCertificateConfiguration `
                                       -CertificateName $XConnectCert `
                                       -CertPath $CertPath
@@ -218,20 +234,37 @@ function Install-XConnect {
     #Install xConnect
     try
     {
-        Install-SitecoreConfiguration $XConnectConfiguration `
-                                      -Package $XConnectPackage `
-                                      -LicenseFile $LicenseFile `
-                                      -SiteRoot $SitecoreSiteRoot `
-                                      -SiteName $XConnectSiteName `
-                                      -XConnectCert $XConnectCert `
-                                      -SqlDbPrefix $SolutionPrefix `
-                                      -SolrCorePrefix $SolutionPrefix `
-                                      -SqlAdminUser $SqlAdminUser `
-                                      -SqlAdminPassword $SqlAdminPassword `
-                                      -SqlServer $SqlServer `
-                                      -SqlCollectionUser $XConnectSqlCollectionUser `
-                                      -SqlCollectionPassword $XConnectSqlCollectionPassword `
-                                      -SolrUrl $SolrUrl
+        $xconnectParams = @{
+            Path = $XConnectConfiguration
+            Package = $XConnectPackage
+            LicenseFile = $LicenseFile
+            SiteRoot = $SitecoreSiteRoot
+            Sitename = $XConnectSiteName
+            XConnectCert = $XConnectCert
+            SqlDbPrefix = $SolutionPrefix
+            SolrCorePrefix = $SolutionPrefix
+            SqlAdminUser = $SqlAdminUser
+            SqlAdminPassword = $SqlAdminPassword
+            SqlServer = $SqlServer
+            SolrURL = $SolrUrl
+        }
+        
+        Install-SitecoreConfiguration @xconnectParams
+
+        #Install-SitecoreConfiguration $XConnectConfiguration `
+        #                              -Package $XConnectPackage `
+        #                              -LicenseFile $LicenseFile `
+        #                              -SiteRoot $SitecoreSiteRoot `
+        #                              -SiteName $XConnectSiteName `
+        #                              -XConnectCert $XConnectCert `
+        #                              -SqlDbPrefix $SolutionPrefix `
+        #                              -SolrCorePrefix $SolutionPrefix `
+        #                              -SqlAdminUser $SqlAdminUser `
+        #                              -SqlAdminPassword $SqlAdminPassword `
+        #                              -SqlServer $SqlServer `
+        #                              -SqlCollectionUser $XConnectSqlCollectionUser `
+        #                              -SqlCollectionPassword $XConnectSqlCollectionPassword `
+        #                              -SolrUrl $SolrUrl
     }
     catch
     {
@@ -263,11 +296,21 @@ function Install-Sitecore {
     try
     {
         #Install Sitecore Solr
-        Install-SitecoreConfiguration $SitecoreSolrConfiguration `
-                                      -SolrUrl $SolrUrl `
-                                      -SolrRoot $SolrRoot `
-                                      -SolrService $SolrService `
-                                      -CorePrefix $SolutionPrefix
+        
+        $solrParams = @{
+            Path = $SitecoreSolrConfiguration
+            SolrUrl = $SolrUrl
+            SolrRoot = $SolrRoot
+            SolrService = $SolrService
+            CorePrefix = $SolutionPrefix
+        }
+        Install-SitecoreConfiguration @solrParams
+        
+        #Install-SitecoreConfiguration $SitecoreSolrConfiguration `
+        #                              -SolrUrl $SolrUrl `
+        #                              -SolrRoot $SolrRoot `
+        #                              -SolrService $SolrService `
+        #                              -CorePrefix $SolutionPrefix
     }
     catch
     {
@@ -277,23 +320,42 @@ function Install-Sitecore {
 
     try
     {
+
+        $sitecoreParams = @{
+            Path = $SitecoreConfiguration
+            Package = $SitecorePackage
+            LicenseFile = $LicenseFile
+            SiteRoot = $SitecoreSiteRoot
+            Sitename = $sitecoreSiteName
+            XConnectCert = $XConnectCert
+            SqlDbPrefix = $SolutionPrefix
+            SolrCorePrefix = $SolutionPrefix
+            SqlAdminUser = $SqlAdminUser
+            SqlAdminPassword = $SqlAdminPassword
+            SqlServer = $SqlServer
+            SolrUrl = $SolrUrl
+            XConnectCollectionService = "https://$XConnectSiteName"
+        }
+
+        Install-SitecoreConfiguration @sitecoreParams
+
         #Install Sitecore
-        Install-SitecoreConfiguration $SitecoreConfiguration `
-                                      -Package $SitecorePackage `
-                                      -LicenseFile $LicenseFile `
-                                      -SiteRoot $SitecoreSiteRoot `
-                                      -SiteName $SitecoreSiteName `
-                                      -XConnectCert $XConnectCert `
-                                      -SqlDbPrefix $SolutionPrefix `
-                                      -SolrCorePrefix $SolutionPrefix `
-                                      -SqlAdminUser $SqlAdminUser `
-                                      -SqlAdminPassword $SqlAdminPassword `
-                                      -SqlServer $SqlServer `
-                                      -SolrUrl $SolrUrl `
-                                      -XConnectCollectionService "https://$XConnectSiteName" `
-                                      -XConnectReferenceDataService "https://$XConnectSiteName" `
-                                      -MarketingAutomationOperationsService "https://$XConnectSiteName" `
-                                      -MarketingAutomationReportingService "https://$XConnectSiteName"
+        #Install-SitecoreConfiguration $SitecoreConfiguration `
+        #                              -Package $SitecorePackage `
+        #                              -LicenseFile $LicenseFile `
+        #                              -SiteRoot $SitecoreSiteRoot `
+        #                              -SiteName $SitecoreSiteName `
+        #                              -XConnectCert $XConnectCert `
+        #                              -SqlDbPrefix $SolutionPrefix `
+        #                              -SolrCorePrefix $SolutionPrefix `
+        #                              -SqlAdminUser $SqlAdminUser `
+        #                              -SqlAdminPassword $SqlAdminPassword `
+        #                              -SqlServer $SqlServer `
+        #                             -SolrUrl $SolrUrl `
+        #                              -XConnectCollectionService "https://$XConnectSiteName" `
+        #                              -XConnectReferenceDataService "https://$XConnectSiteName" `
+        #                              -MarketingAutomationOperationsService "https://$XConnectSiteName" `
+        #                              -MarketingAutomationReportingService "https://$XConnectSiteName"
     }
     catch
     {
@@ -304,6 +366,13 @@ function Install-Sitecore {
     try
     {
         #Set web certificate on Sitecore site
+        #$sitecoreSSLParams = @{
+        #    Path = $SitecoreSSLConfiguration
+        #    SiteRoot = $SitecoreSiteRoot
+        #    SiteName = $SitecoreSiteName
+        #}
+        #Install-SitecoreConfiguration $sitecoreSSLParams
+        
         Install-SitecoreConfiguration $SitecoreSSLConfiguration `
                                       -SiteRoot $SitecoreSiteRoot `
                                       -SiteName $SitecoreSiteName
