@@ -36,19 +36,20 @@ if((Test-Path $P12Path)) {
 try {
 	$keytool = (Get-Command 'keytool.exe').Source
 } catch {
-	try {
-		$path = $Env:JAVA_HOME + '\bin\keytool.exe'
-		Write-Host $path
-		if (Test-Path $path) {
-			$keytool = (Get-Command $path).Source
-		}
-	} catch {
-		$keytool = Read-Host "keytool.exe not on path. Enter path to keytool (found in JRE bin folder)"
+        try {
+		    $path = $Env:JAVA_HOME + '\bin\keytool.exe'
+		    Write-Host $path
+		    if (Test-Path $path) {
+			    $keytool = (Get-Command $path).Source
+		    }
+	    } catch {	
 
-		if([string]::IsNullOrEmpty($keytool) -or -not (Test-Path $keytool)) {
-			Write-Error "Keytool path was invalid."
-		}
-	}
+        $keytool = Read-Host "keytool.exe not on path. Enter path to keytool (found in JRE bin folder)"
+
+	    if([string]::IsNullOrEmpty($keytool) -or -not (Test-Path $keytool)) {
+		    Write-Error "Keytool path was invalid."
+	    }
+    }
 }
 
 ### DOING STUFF
