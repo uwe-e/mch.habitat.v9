@@ -228,6 +228,11 @@
             }
             if (!this.ModelState.IsValid)
             {
+                if (string.IsNullOrEmpty(profile.Interest))
+                {
+                    profile.InterestTypes = UserProfileService.GetInterests();
+                }
+
                 return this.View(profile);
             }
 

@@ -16,7 +16,7 @@
         public string LastName { get; set; }
 
         [Display(Name = nameof(PhoneNumberCaption), ResourceType = typeof(EditProfile))]
-        [RegularExpression(@"^\+?\d*(\(\d+\)-?)?\d+(-?\d+)+$", ErrorMessageResourceName = nameof(PhoneNumberFormat), ErrorMessageResourceType = typeof(EditProfile))]
+        [RegularExpression(@"^\+?\d*(\(\d+\)-?)?\d+(-?\s\d+)+$", ErrorMessageResourceName = nameof(PhoneNumberFormat), ErrorMessageResourceType = typeof(EditProfile))]
         [MaxLength(20, ErrorMessageResourceName = nameof(MaxLengthExceeded), ErrorMessageResourceType = typeof(EditProfile))]
         public string PhoneNumber { get; set; }
 
