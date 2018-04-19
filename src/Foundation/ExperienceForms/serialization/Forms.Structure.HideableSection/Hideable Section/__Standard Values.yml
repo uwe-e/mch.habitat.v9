@@ -1,0 +1,14 @@
+﻿---
+ID: "78a683da-6d54-4be0-967b-b572ddbdced9"
+Parent: "d5226a6c-7c5e-4037-b821-45050279a0d1"
+Template: "d5226a6c-7c5e-4037-b821-45050279a0d1"
+Path: /sitecore/templates/System/Forms/Fields/Hideable Section/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180412T100929Z

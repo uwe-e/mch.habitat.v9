@@ -1,0 +1,40 @@
+﻿---
+ID: "5c02e88b-405f-4f4a-ba5b-8e4a97b147fd"
+Parent: "77d13f14-e78f-4476-8a2e-2b011fe0fb97"
+Template: "a60edcaf-1285-46b5-8380-d790bb8c8708"
+Path: /sitecore/system/Settings/Forms/Field Types/Structure/Hideable Section
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/document_header.png
+- ID: "12594037-53e5-44c0-ad63-deb52dead374"
+  Hint: View Path
+  Value: FieldTemplates/HideableSection
+- ID: "16882a65-d10b-4e9e-9d6a-b13480a34f2d"
+  Hint: Model Type
+  Value: Sitecore.ExperienceForms.Mvc.Models.Fields.FieldViewModel,Sitecore.ExperienceForms.Mvc
+- ID: "73f3c325-9b2a-4854-b698-038e06887fcd"
+  Hint: Property Editor
+  Value: "{3A0F7D5C-E77E-428D-A502-E406462BB227}"
+- ID: "8e45815d-adcd-4dd9-9e20-fefdb01aad8a"
+  Hint: BackgroundColor
+  Value: Banana
+- ID: "8f40d151-4155-4564-b343-fa445410e3e0"
+  Hint: Icon
+  Value: OfficeWhite/32x32/document_header.png
+- ID: "f2322bb9-bf52-45a6-a969-ac3735cc7cbf"
+  Hint: Field Template
+  Value: "{D5226A6C-7C5E-4037-B821-45050279A0D1}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180412T094338Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
