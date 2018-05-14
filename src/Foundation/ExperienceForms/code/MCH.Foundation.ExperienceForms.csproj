@@ -68,6 +68,9 @@
     <Reference Include="Sitecore.Speak.Client">
       <HintPath>..\..\..\..\lib\Sitecore\Sitecore.Speak.Client.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.Speak.Components">
+      <HintPath>..\..\..\..\lib\Sitecore\Sitecore.Speak.Components.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -112,11 +115,14 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="Sitecore\Shell\Client\Applications\FormsBuilder\Layouts\Renderings\PageDatasource\PageDatasource.js" />
     <Content Include="Views\FormBuilder\FieldTemplates\HideableSection.cshtml" />
     <Content Include="Views\FormBuilder\Index.cshtml" />
+    <Content Include="Sitecore\Shell\Client\Applications\FormsBuilder\Layouts\Renderings\PageDatasource\PageDatasource.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client\Models\PageDataSourceRenderingModel.cs" />
     <Compile Include="Client\Pages\PropertyGridForm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
