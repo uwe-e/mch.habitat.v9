@@ -5,7 +5,7 @@ Param(
     $solrHost = "solr",
     $solrSSL = $true,
     $nssmVersion = "2.24",
-    $JREVersion = "1.8.0_161"
+    $JREVersion = "1.8.0_162"
 )
 
 $JREPath = "C:\Program Files (x86)\Java\jre$JREVersion"
@@ -14,7 +14,10 @@ $solrRoot = "$installFolder\$solrName"
 $nssmRoot = "$installFolder\nssm-$nssmVersion"
 $solrPackage = "https://archive.apache.org/dist/lucene/solr/$solrVersion/$solrName.zip"
 $nssmPackage = "https://nssm.cc/release/nssm-$nssmVersion.zip"
-$downloadFolder = "~\Downloads"
+## because the forlder redirection we've another downloads folder
+#$downloadFolder = "~\Downloads"
+$downloadFolder = Get-ItemPropertyValue 'HKCU:\software\microsoft\windows\currentversion\explorer\shell folders\' -Name '{374DE290-123F-4565-9164-39C4925E467B}'
+
 
 ## Verify elevated
 ## https://superuser.com/questions/749243/detect-if-powershell-is-running-as-administrator
