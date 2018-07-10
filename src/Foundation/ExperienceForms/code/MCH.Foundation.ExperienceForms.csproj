@@ -115,11 +115,17 @@
     <Content Include="App_Config\Include\Foundation\Foundation.ExperienceForms.Serialization.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Foundation\Foundation.ExperienceForms.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="Sitecore\Shell\Client\Applications\FormsBuilder\Layouts\Renderings\FirstSpeakApp\Component1.js" />
+    <Content Include="Sitecore\Shell\Client\Applications\FormsBuilder\Layouts\Renderings\PageDatasource\PageDatasource.css" />
     <Content Include="Sitecore\Shell\Client\Applications\FormsBuilder\Layouts\Renderings\PageDatasource\PageDatasource.js" />
     <Content Include="Views\FormBuilder\FieldTemplates\HideableSection.cshtml" />
     <Content Include="Views\FormBuilder\Index.cshtml" />
     <Content Include="Sitecore\Shell\Client\Applications\FormsBuilder\Layouts\Renderings\PageDatasource\PageDatasource.cshtml" />
+    <Content Include="Sitecore\Shell\Client\Applications\FormsBuilder\Layouts\Renderings\FirstSpeakApp\Component1.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

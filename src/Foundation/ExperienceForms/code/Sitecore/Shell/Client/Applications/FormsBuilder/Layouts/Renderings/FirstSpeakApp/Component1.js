@@ -1,6 +1,6 @@
 ﻿(function(speak) {
   speak.component({
-    name: "PageDatasource",
+    name: "Component1",
     initialize: function(initial, app, el, sitecore) {
     }
   });

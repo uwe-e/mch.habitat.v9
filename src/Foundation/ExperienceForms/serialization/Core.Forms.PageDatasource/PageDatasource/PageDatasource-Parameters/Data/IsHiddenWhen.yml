@@ -2,7 +2,7 @@
 ID: "f59b8c06-6702-454f-82e9-cc588b515e87"
 Parent: "4625ce1b-ec25-4bfa-a87e-14bcfbc44cab"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: "/sitecore/client/Applications/FormsBuilder/Components/Layouts/Renderings/Composites/PageDatasource/PageDatasource-Parameters/Data/IsHiddenWhen"
+Path: "/sitecore/client/Applications/FormsBuilder/Components/Layouts/Renderings/PageDatasource/PageDatasource-Parameters/Data/IsHiddenWhen"
 DB: core
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"

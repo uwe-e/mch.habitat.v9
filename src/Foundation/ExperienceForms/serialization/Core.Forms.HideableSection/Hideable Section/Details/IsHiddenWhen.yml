@@ -8,10 +8,17 @@ SharedFields:
 - ID: "3e079fc3-6b2d-41c9-9204-374a786fc761"
   Hint: BindingConfiguration
   Value: isHiddenWhen=SelectedValue
+- ID: "6d0c0ab0-bc40-4bd0-8acb-16612a180f14"
+  Hint: IsVisible
+  Type: Checkbox
+  Value: 0
 - ID: "a176e7b0-1c0b-4f2e-a494-2df342a75c0e"
   Hint: IsLabelOnTop
   Type: Checkbox
   Value: 1
+- ID: "c5217339-80d0-4725-9340-574eed8e9082"
+  Hint: RenderingItemId
+  Value: "{86A75B44-5A2A-4950-AC4E-232C2C2A5D00}"
 Languages:
 - Language: da
   Fields:

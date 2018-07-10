@@ -1,8 +1,8 @@
 ﻿---
-ID: "4599b6f4-7cfe-4c4b-98b5-5133a52bc333"
-Parent: "b86e1f8d-f7c8-409b-a3b2-83a6d3635ae4"
+ID: "481b1ff7-80cb-413f-b522-868232dc47c7"
+Parent: "facecb59-8197-4320-bf6f-7ad45470eb62"
 Template: "b86e1f8d-f7c8-409b-a3b2-83a6d3635ae4"
-Path: "/sitecore/client/Applications/FormsBuilder/Components/Layouts/Renderings/PageDatasource/PageDatasource-Parameters/__Standard Values"
+Path: "/sitecore/client/Applications/FormsBuilder/Components/Layouts/PropertyGridForm/PageSettings/Settings/Hideable Section/Details/PageDatasource-Parameters"
 DB: core
 SharedFields:
 - ID: "c5217339-80d0-4725-9340-574eed8e9082"
@@ -15,4 +15,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20180424T121745Z
+      Value: 20180530T092131Z

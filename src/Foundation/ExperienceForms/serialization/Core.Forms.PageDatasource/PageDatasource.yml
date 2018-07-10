@@ -1,8 +1,8 @@
 ﻿---
-ID: "fc78f15a-4925-4fe6-990b-e7c8363f8689"
-Parent: "1b9684cf-6198-4f34-8d9e-2fcb60f000dd"
+ID: "86b21be1-bcd1-4f85-a73d-d9408f1cc35e"
+Parent: "6e03d882-0a04-4c98-b3ad-4a0e89abe8a4"
 Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
-Path: /sitecore/client/Applications/FormsBuilder/Components/Layouts/Renderings/Composites/PageDatasource
+Path: /sitecore/client/Applications/FormsBuilder/Components/Layouts/Renderings/PageDatasource
 DB: core
 SharedFields:
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
@@ -14,9 +14,16 @@ SharedFields:
 - ID: "7d24e54f-5c16-4314-90c9-6051aa1a7da1"
   Hint: Parameters Template
   Value: "{B86E1F8D-F7C8-409B-A3B2-83A6D3635AE4}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "{B86E1F8D-F7C8-409B-A3B2-83A6D3635AE4}"
 - ID: "ddab263e-b42e-419a-aa6f-081b7393ca38"
   Hint: Model
   Value: MCH.Foundation.ExperienceForms.Client.Models.PageDataSourceRenderingModel,MCH.Foundation.ExperienceForms
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: <r />
 Languages:
 - Language: en
   Versions:
@@ -24,4 +31,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20180424T070542Z
+      Value: 20180530T071558Z

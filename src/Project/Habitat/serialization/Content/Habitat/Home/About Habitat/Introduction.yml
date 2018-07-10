@@ -47,6 +47,25 @@ Languages:
         udvidelsesmuligheder<br>
         Giver en hurtig og overskuelig m&aring;de at udvide l&oslash;sninger og genbruge funktioner p&aring; tv&aelig;rs af websteder og endda p&aring; tv&aelig;rs af l&oslash;sninger<br>
         Konventionerne er baseret p&aring; en r&aelig;kke velbegrundede og industri-standard principper s&aring;som lav Kobling / H&oslash;j Samh&oslash;righed Domain Driven Design Package Principper
+- Language: "de-CH"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180615T091520Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "ac3fd4db-8266-476d-9635-67814d91e901"
+      Hint: Summary
+      Value: |
+        <p>Sitecore Habitat ist eine Ansammlung von Seiten, anhand derer die M&ouml;glichkeiten der Sitecore Experience Platform aufgezeigt werden.</p>
+        <p>Die Solution ist auf den Sitecore Helix Richtlinien aufgebaut, durch die eine h&ouml;here Produktivit&auml;t und Qualit&auml;t in Sitecore Projekten erm&ouml;glicht wird.&nbsp;</p>
+    - ID: "c30a013f-3cc8-4961-9837-1c483277084a"
+      Hint: Title
+      Value: Einführung in Habitat
 - Language: en
   Versions:
   - Version: 1

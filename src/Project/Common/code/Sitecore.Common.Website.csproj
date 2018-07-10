@@ -163,6 +163,9 @@
     <Content Include="App_Config\Environment\Project\z.Rainbow.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Project\z.Sitecore.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="compilerconfig.json" />
     <Content Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
