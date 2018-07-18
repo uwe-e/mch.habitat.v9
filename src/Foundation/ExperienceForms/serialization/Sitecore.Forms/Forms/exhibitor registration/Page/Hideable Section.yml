@@ -1,0 +1,24 @@
+﻿---
+ID: "b5493545-1205-4f65-8b60-92345e89d658"
+Parent: "11178f5a-a69f-4cd1-98e8-4fd3c220bed7"
+Template: "d5226a6c-7c5e-4037-b821-45050279a0d1"
+Path: /sitecore/Forms/exhibitor registration/Page/Hideable Section
+DB: master
+SharedFields:
+- ID: "589a7ade-81d4-4a60-b9e2-7eaf6ae8a563"
+  Hint: Field Type
+  Value: "{5C02E88B-405F-4F4A-BA5B-8E4A97B147FD}"
+- ID: "7abaa3f6-6ec0-4b65-a463-7919bfae55aa"
+  Hint: Css Class
+  Value: 
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 900
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180710T133812Z

@@ -18,6 +18,17 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
+              uid="{9BE087C0-B35D-42BD-96E5-E45CB353C25A}"
+              p:before="*"
+              s:ds="{5FC0801A-2C56-4F7D-9E29-E36736524E1E}"
+              s:id="{6B5B0FE6-5C85-4487-BA7E-F8C2ECC186A8}"
+              s:ph="/page-layout/section-narrow/col-wide-1-{EF6081E7-5653-44F0-9F45-AD6BEE8ABF44}-0" />
+            <r
+              uid="{EF6081E7-5653-44F0-9F45-AD6BEE8ABF44}"
+              p:after="r[@uid='{9BE087C0-B35D-42BD-96E5-E45CB353C25A}']"
+              s:id="{03112E88-1499-4132-9D5F-E213AFD2019C}"
+              s:ph="/page-layout/section-narrow" />
+            <r
               uid="{9E06A3DF-5963-49E5-AB45-DCF357F4F9F2}"
               p:after="r[@uid='{565F9960-4E47-4DA4-9406-0A29DD09911F}']"
               s:ds="{B33DD461-0D16-47FA-B688-07B18704101E}"
