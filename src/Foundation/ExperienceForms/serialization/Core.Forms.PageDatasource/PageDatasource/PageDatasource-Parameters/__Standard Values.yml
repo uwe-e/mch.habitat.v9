@@ -13,6 +13,12 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "18ba3bf2-a693-4ae4-bf92-59657f76baa6"
+      Hint: LabelForIsHiddenWhen
+      Value: Is Hidden When
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20180424T121745Z
+    - ID: "50ee1cb3-85f9-4ad5-b395-7a85bad1849b"
+      Hint: LabelForIsVisibleWhen
+      Value: Is Visible When

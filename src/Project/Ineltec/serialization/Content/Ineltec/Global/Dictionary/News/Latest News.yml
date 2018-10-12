@@ -1,0 +1,14 @@
+﻿---
+ID: "bc9568ef-c717-4199-810d-c8da171c90bd"
+Parent: "4604b396-7b9f-41ef-a2cf-83b1e9edcba3"
+Template: "98e4bdc6-9b43-4eb2-baa3-d4303c35852e"
+Path: /sitecore/content/Ineltec/Global/Dictionary/News/Latest News
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160406T232643Z

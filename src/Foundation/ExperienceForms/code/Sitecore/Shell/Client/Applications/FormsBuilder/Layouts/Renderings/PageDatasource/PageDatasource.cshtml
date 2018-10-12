@@ -4,5 +4,18 @@
 }
 
 <div @Model.HtmlAttributes>
-    <div style="background-color: red">hallohallo</div>
+    <div class="sc-small-bottom-padding">
+        <div class="sc-formlabeltop" data-bind="text: LabelForIsHiddenWhen">@Model.LabelForIsHiddenWhen</div>
+        <select data-sc-id="sc-selectOptions"
+                size='1'
+                class="form-control sc-droplist sc-selection-options-droplist"
+                data-bind='attr:{multiple:MultipleSelection || null, size:MultipleSelection() ? "8" : "1"},
+                optionsText:"text",
+                optionsValue:"itemId",
+                selectedOptions: Selection,
+                options: Items,
+                optionsCaption: "&nbsp;",
+                optionsAfterRender: updateSelectionFromItems'></select>
+        <div style="background-color: red">hallohallo</div>
+    </div>
 </div>

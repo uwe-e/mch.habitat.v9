@@ -1,0 +1,50 @@
+﻿---
+ID: "2af1755a-6245-4d98-81f8-ee04a364e3bc"
+Parent: "4be4a35d-9516-4503-81aa-d9ce6539e27a"
+Template: "94a8c8e9-690b-4e65-98e7-f95800222767"
+Path: "/sitecore/content/Ineltec/Home/Modules/Feature/Forms/Exhibitor-Registration"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{9BE087C0-B35D-42BD-96E5-E45CB353C25A}"
+              p:before="*"
+              s:ds="{5FC0801A-2C56-4F7D-9E29-E36736524E1E}"
+              s:id="{6B5B0FE6-5C85-4487-BA7E-F8C2ECC186A8}"
+              s:ph="/page-layout/section-narrow/col-wide-1-{EF6081E7-5653-44F0-9F45-AD6BEE8ABF44}-0" />
+            <r
+              uid="{EF6081E7-5653-44F0-9F45-AD6BEE8ABF44}"
+              p:after="r[@uid='{9BE087C0-B35D-42BD-96E5-E45CB353C25A}']"
+              s:id="{03112E88-1499-4132-9D5F-E213AFD2019C}"
+              s:ph="/page-layout/section-narrow" />
+            <r
+              uid="{9E06A3DF-5963-49E5-AB45-DCF357F4F9F2}"
+              p:after="r[@uid='{565F9960-4E47-4DA4-9406-0A29DD09911F}']"
+              s:ds="{B33DD461-0D16-47FA-B688-07B18704101E}"
+              s:id="{6B5B0FE6-5C85-4487-BA7E-F8C2ECC186A8}"
+              s:ph="/page-layout/col-wide-1" />
+          </d>
+        </r>
+    - ID: "1b483e91-d8c4-4d19-ba03-462074b55936"
+      Hint: NavigationTitle
+      Value: "Exhibitor-Registration"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180406T073857Z
+    - ID: "c30a013f-3cc8-4961-9837-1c483277084a"
+      Hint: Title
+      Value: Anmeldung
+    - ID: "ca0479ce-0bfe-4522-83de-ba688b380a78"
+      Hint: BrowserTitle
+      Value: "Exhibitor-Registration"

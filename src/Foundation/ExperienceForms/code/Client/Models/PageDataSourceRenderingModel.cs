@@ -22,6 +22,23 @@ namespace MCH.Foundation.ExperienceForms.Client.Models
             set;
         }
 
+        public string LabelForIsHiddenWhen
+        {
+            get;
+            set;
+        }
+
+        public string LabelForIsVisibleWhen
+        {
+            get;
+            set;
+        }
+        public override void Initialize(Rendering rendering)
+        {
+            base.Initialize(rendering);
+            LabelForIsHiddenWhen = GetString("LabelForIsHiddenWhen", "");
+            LabelForIsVisibleWhen = GetString("LabelForIsVisibleWhen", "");
+        }
         //public override void Initialize(Rendering rendering)
         //{
         //    //ScriptCategory = "foundationexperienceforms";

@@ -1,0 +1,14 @@
+﻿---
+ID: "492e5148-fdbf-492f-97d1-833c9b8e30a7"
+Parent: "a595d663-29f1-4731-9e36-b72dc3b9b554"
+Template: "ac7394d5-2aa7-4fdb-a7d8-b1b87f9fa661"
+Path: /sitecore/content/Ineltec/Global/Links/Social Menu
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20150927T064547Z
