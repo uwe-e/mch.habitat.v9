@@ -1,5 +1,5 @@
 ﻿---
-ID: "922893fb-dd21-4d5c-bba3-1c8fdb4822d5"
+ID: "3383ff56-412e-4fc5-ac28-03ecb2252284"
 Parent: "da04b275-8838-4a3a-afee-817cf1fdd2eb"
 Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
 Path: /sitecore/layout/Layouts/Project/Ineltec
@@ -11,8 +11,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20181011T065328Z
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\admin
+      Value: "20181017T111506:636753717069773406Z"

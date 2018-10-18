@@ -1,7 +1,7 @@
 ﻿---
 ID: "936c10cc-1de4-49d2-8c17-b681d8964e0b"
-Parent: "971c7d7a-ee2a-4205-8e76-0459b09874d7"
-Template: "3a45fe4f-e8e6-4eab-9101-ba334cd9e9e2"
+Parent: "f4ad0b7d-375b-41c6-b05a-a459daf1f810"
+Template: "4a8822cc-b418-4452-ab0f-8bb6df2f2114"
 Path: /sitecore/content/Ineltec/Home
 DB: master
 SharedFields:
@@ -271,7 +271,7 @@ Languages:
         sitecore\admin
     - ID: "ca0479ce-0bfe-4522-83de-ba688b380a78"
       Hint: BrowserTitle
-      Value: Flexibility, Simplicity, Extensibility
+      Value: egalite, fraternite, liberte
 - Language: "ja-JP"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"

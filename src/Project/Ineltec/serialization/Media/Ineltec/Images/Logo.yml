@@ -1,6 +1,6 @@
 ﻿---
-ID: "1305d7de-730a-45c9-9047-fe62ebb15d80"
-Parent: "4f5777f0-1652-49d1-ab2d-298d5c56d484"
+ID: "3d407217-7c89-4ede-b3bf-d7a72f28bfda"
+Parent: "46a4890e-21c2-4988-841f-a4d72597323f"
 Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
 Path: /sitecore/media library/Ineltec/Images/Logo
 DB: master
@@ -11,7 +11,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20150921T070516Z
+      Value: 20181017T124743Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

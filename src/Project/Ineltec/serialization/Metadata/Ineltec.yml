@@ -1,5 +1,5 @@
 ﻿---
-ID: "cb64071f-cc2e-40fe-91bf-13511f7955f5"
+ID: "ef7d0f9b-8b46-4dfa-bda0-d9b6373aa25e"
 Parent: "553d3cc1-b549-4aa1-9ed9-e8e06e14a683"
 Template: "cd047791-c29a-4596-aeee-db5e70421c1f"
 Path: /sitecore/system/Settings/Feature/Metadata/Ineltec
@@ -11,4 +11,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20181011T065727Z
+      Value: "20181017T111718:636753718381420490Z"

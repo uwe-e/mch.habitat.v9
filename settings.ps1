@@ -18,7 +18,7 @@ $LicenseFile = "$AssetsRoot\license.xml"
 $CertPath = Join-Path "$AssetsRoot" "Certificates"
 
 # SQL Parameters
-$SqlServer = ".\SQLEXPRESS"
+$SqlServer = ".\SQLServer2016"
 $SqlAdminUser = "sa"
 $SqlAdminPassword = "test12345"
 
